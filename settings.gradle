@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //这里是针对文件服务模块添加的
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+    }
+}
+rootProject.name = "MWYAndroid"
+include ':app'
+include ':common'
+include ':file'
+include ':permission'
+include ':recycler_view'
+include ':room_db'

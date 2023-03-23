@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.owner.recycler_view">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".RecyclerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MWYAndroid">
+
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:theme="@style/WelcomeTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.databinding.DataBindingUseActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.owner.recycler_view.view.animation.AnimationUseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.headerfooter.HeaderAndFooterUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.loadmore.AutoLoadMoreRefreshUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.emptyview.EmptyViewUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.itemclick.ItemClickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.dragswipe.ManualDragAndSwipeUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.upfetch.UpFetchUseActivity"
+            android:exported="false" /> <!-- <activity android:name=".activity.node.NodeSectionUseActivity" /> -->
+        <activity
+            android:name=".view.differ.DifferActivity"
+            android:exported="false" /> <!-- <activity android:name=".activity.node.ChooseNodeUseTypeActivity" /> -->
+        <activity
+            android:name=".view.loadmore.NoAutoAutoLoadMoreRefreshUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.dragswipe.DragAndSwipeDifferActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.dragswipe.HeaderDragAndSwipeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.dragswipe.DragAndSwipeUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.dragswipe.DefaultDragAndSwipeActivity"
+            android:exported="false" />
+        <activity android:name=".view.scene.GroupDemoActivity" />
+
+    </application>
+
+</manifest>
