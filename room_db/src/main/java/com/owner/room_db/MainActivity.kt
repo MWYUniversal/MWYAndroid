@@ -2,11 +2,13 @@ package com.owner.room_db
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.owner.room_db.dao.UserDao
 import com.owner.room_db.entity.User
 import com.owner.room_db.utils.DbManager
 import kotlinx.coroutines.runBlocking
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +16,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        var db = DbManager.db
+        var db1 = DbManager.db
+        var db2 = DbManager.db
+        var db3 = DbManager.db
+
+        Log.e("onCreate: ", db.hashCode().toString())
+        Log.e("onCreate: ", db1.hashCode().toString())
+        Log.e("onCreate: ", db2.hashCode().toString())
+        Log.e("onCreate: ", db3.hashCode().toString())
 
         insertAll()
         val queryAllUser = userDao.queryAllUser()
