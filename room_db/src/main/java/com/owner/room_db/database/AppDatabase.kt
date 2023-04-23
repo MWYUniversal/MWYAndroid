@@ -6,19 +6,25 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.owner.room_db.dao.CarDao
+import com.owner.room_db.dao.PersonDao
 import com.owner.room_db.dao.UserDao
+import com.owner.room_db.entity.Car
+import com.owner.room_db.entity.Person
 import com.owner.room_db.entity.User
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class, Car::class,Person::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
+    abstract fun carDao():CarDao
+    abstract fun personDao():PersonDao
 
     companion object {
         private var instance: AppDatabase? = null
 
         private val TAG: String? = AppDatabase::class.simpleName
 
-        fun get(context: Context): AppDatabase {
+        fun getInstance(context: Context ,callback: RoomDatabase.Callback): AppDatabase {
             if (instance == null) {
                 instance = Room.databaseBuilder(context, AppDatabase::class.java, "user_.db")
                     .fallbackToDestructiveMigration()
@@ -27,12 +33,7 @@ abstract class AppDatabase : RoomDatabase() {
                     .allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
 //                    .addMigrations(ADD_FIELD_MIGRATION_1_2)
-                    .addCallback(object : Callback() {
-                        override fun onCreate(db: SupportSQLiteDatabase) {
-                            super.onCreate(db)
-                            Log.e(TAG, "onCreate db_name is=" + db.path)
-                        }
-                    })
+                    .addCallback(callback)
                     .build()
             }
             return instance!!

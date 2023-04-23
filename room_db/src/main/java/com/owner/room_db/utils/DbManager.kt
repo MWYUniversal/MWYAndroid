@@ -15,17 +15,9 @@ import com.owner.room_db.database.AppDatabase
 object DbManager {
     private val TagL = MainActivity::class.java.simpleName
 
-    //数据库名
-    private const val dbName: String = "zroom"
-
     //懒加载创建数据库
     val db: AppDatabase by lazy {
-        Room.databaseBuilder(
-            App.app.applicationContext, AppDatabase::class.java, dbName
-        ).allowMainThreadQueries()//允许在主线程操作
-            .addCallback(DbCreateCallBack)//增加回调监听
-            .addMigrations(ZMigration)//增加数据库迁移
-            .build()
+        AppDatabase.getInstance(App.app.applicationContext,DbCreateCallBack)
     }
 
     private object DbCreateCallBack : RoomDatabase.Callback() {
