@@ -3,6 +3,11 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        //阿里云jcenter仓库
+        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {
+            url 'https://jitpack.io'
+        }
     }
 }
 dependencyResolutionManagement {
@@ -12,6 +17,12 @@ dependencyResolutionManagement {
         mavenCentral()
         //这里是针对文件服务模块添加的
         maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+
+        //阿里云jcenter仓库
+        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {
+            url 'https://jitpack.io'
+        }
     }
 }
 rootProject.name = "MWYAndroid"
