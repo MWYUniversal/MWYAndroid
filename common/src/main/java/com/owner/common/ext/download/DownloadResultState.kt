@@ -1,7 +1,6 @@
 package com.owner.common.ext.download
 
 /**
- * @author : hgj
  * @date   : 2020/7/13
  */
 sealed class DownloadResultState {

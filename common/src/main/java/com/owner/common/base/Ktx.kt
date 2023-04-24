@@ -10,7 +10,6 @@ import android.net.Uri
 import androidx.lifecycle.ProcessLifecycleOwner
 
 /**
- * 作者　: hegaojian
  * 时间　: 2019/12/14
  * 描述　:
  */

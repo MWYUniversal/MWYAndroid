@@ -1,7 +1,6 @@
 package com.owner.common.network
 
 /**
- * 作者　: hegaojian
  * 时间　: 2019/12/17
  * 描述　: 服务器返回数据的基类
  * 如果需要框架帮你做脱壳处理请继承它！！请注意：

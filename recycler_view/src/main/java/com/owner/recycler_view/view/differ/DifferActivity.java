@@ -17,7 +17,6 @@ import java.util.List;
 
 
 /**
- * Created by limuyang
  * Date: 2019/7/14O
  */
 public final class DifferActivity extends BaseViewBindingActivity<ActivityDiffutilBinding> {

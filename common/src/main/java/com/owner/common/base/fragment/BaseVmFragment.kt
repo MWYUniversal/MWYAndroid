@@ -12,10 +12,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.owner.common.base.viewmodel.BaseViewModel
+import com.owner.common.ext.getVmClazz
+import com.owner.common.network.manager.NetState
+import com.owner.common.network.manager.NetworkStateManager
 
 
 /**
- * 作者　: hegaojian
  * 时间　: 2019/12/12
  * 描述　: ViewModelFragment基类，自动把ViewModel注入Fragment
  */
@@ -100,7 +102,7 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
             handler.postDelayed( {
                 lazyLoadData()
                 //在Fragment中，只有懒加载过了才能开启网络变化监听
-                NetworkStateManager.instance.mNetworkStateCallback.observeInFragment(
+                NetworkStateManager.instance.mNetworkStateCallback.observe(
                     this,
                     Observer {
                         //不是首次订阅时调用方法，防止数据第一次监听错误
@@ -126,10 +128,10 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
      * 注册 UI 事件
      */
     private fun registorDefUIChange() {
-        mViewModel.loadingChange.showDialog.observeInFragment(this, Observer {
+        mViewModel.loadingChange.showDialog.observe(this, Observer {
             showLoading(it)
         })
-        mViewModel.loadingChange.dismissDialog.observeInFragment(this, Observer {
+        mViewModel.loadingChange.dismissDialog.observe(this, Observer {
             dismissLoading()
         })
     }
@@ -141,11 +143,11 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
     protected fun addLoadingObserve(vararg viewModels: BaseViewModel) {
         viewModels.forEach { viewModel ->
             //显示弹窗
-            viewModel.loadingChange.showDialog.observeInFragment(this, Observer {
+            viewModel.loadingChange.showDialog.observe(this, Observer {
                 showLoading(it)
             })
             //关闭弹窗
-            viewModel.loadingChange.dismissDialog.observeInFragment(this, Observer {
+            viewModel.loadingChange.dismissDialog.observe(this, Observer {
                 dismissLoading()
             })
         }

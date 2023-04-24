@@ -10,9 +10,6 @@ import com.owner.recycler_view.utils.Tips
 import com.owner.recycler_view.view.itemclick.adapter.ItemClickAdapter
 
 
-/**
- * @author Allen
- */
 class ItemClickActivity : BaseViewBindingActivity<ActivityUniversalRecyclerBinding>() {
 
     private val adapter: ItemClickAdapter by lazy(LazyThreadSafetyMode.NONE) {

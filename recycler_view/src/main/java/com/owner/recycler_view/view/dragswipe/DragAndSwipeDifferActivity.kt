@@ -22,9 +22,7 @@ import com.owner.recycler_view.utils.VibratorUtils.vibrate
 
 
 /**
- * Created by limuyang
  * Date: 2019/7/14O
- *
  * DiffAdapter DragAndSwipe
  */
 class DragAndSwipeDifferActivity : BaseViewBindingActivity<ActivityUniversalRecyclerBinding>() {

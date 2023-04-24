@@ -1,7 +1,6 @@
 package com.owner.common.network
 
 /**
- * 作者　: hegaojian
  * 时间　: 2019/12/17
  * 描述　: 错误枚举类
  */

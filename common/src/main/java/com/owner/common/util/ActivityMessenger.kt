@@ -24,7 +24,6 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 
 /**
- * @author wuyr
  * @github https://github.com/wuyr/ActivityMessenger
  * @since 2019-08-05 上午11:56
  */
@@ -462,7 +461,6 @@ internal object IntentFieldMethod {
  *      int1 = 1000 // set
  * </p>
  *
- * @author Jowan
  * Created on 2019/8/15.
  */
 class ActivityExtras<T>(private val extraName: String, private val defaultValue: T) :

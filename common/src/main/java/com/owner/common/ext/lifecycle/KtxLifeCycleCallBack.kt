@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.owner.common.ext.util.logd
 
 /**
- * 作者　: hegaojian
  * 时间　: 20120/1/7
  * 描述　:
  */

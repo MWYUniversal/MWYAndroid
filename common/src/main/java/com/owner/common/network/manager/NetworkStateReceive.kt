@@ -8,7 +8,6 @@ import com.owner.common.network.NetworkUtil
 
 
 /**
- * 作者　: hegaojian
  * 时间　: 2020/5/2
  * 描述　: 网络变化接收器
  */

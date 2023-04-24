@@ -6,7 +6,6 @@ import android.os.Build
 import com.owner.common.base.appContext
 
 /**
- * @author : hgj
  * @date   : 2020/7/13
  */
 object ShareDownLoadUtil {

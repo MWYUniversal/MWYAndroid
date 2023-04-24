@@ -22,7 +22,6 @@ package com.owner.recycler_view.decoretion;//package com.chad.baserecyclerviewad
 // * 配合Brvah的Section使用，不对Head生效，仅对每个Head的子Grid列表生效<br>
 // * Section Grid中Item的宽度应设为MATCH_PARAENT
 // *
-// * @author : renpeng
 // * @since : 2018/9/29
 // */
 //public class GridSectionAverageGapItemDecoration extends RecyclerView.ItemDecoration {

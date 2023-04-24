@@ -5,7 +5,6 @@ import com.owner.common.ext.download.DownloadResultState
 import com.owner.common.ext.download.OnDownLoadListener
 
 /**
- * @author : hgj
  * @date   : 2020/6/30
  *
  */

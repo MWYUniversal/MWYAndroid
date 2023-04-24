@@ -1,7 +1,6 @@
 package com.owner.recycler_view.entity
 
 /**
- * @author: limuyang
  * @date: 2019-12-06
  * @Description:
  */

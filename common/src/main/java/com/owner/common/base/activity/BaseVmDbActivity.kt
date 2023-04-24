@@ -3,6 +3,7 @@ package com.owner.common.base.activity
 import android.view.View
 import androidx.databinding.ViewDataBinding
 import com.owner.common.base.viewmodel.BaseViewModel
+import com.owner.common.ext.inflateBindingWithGeneric
 
 /**
  * 描述　: 包含ViewModel 和Databind ViewModelActivity基类，把ViewModel 和Databind注入进来了

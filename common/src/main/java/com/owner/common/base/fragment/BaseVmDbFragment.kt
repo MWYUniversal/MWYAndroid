@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import com.owner.common.base.viewmodel.BaseViewModel
+import com.owner.common.ext.inflateBindingWithGeneric
 
 /**
 

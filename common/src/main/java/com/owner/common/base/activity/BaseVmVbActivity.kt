@@ -3,6 +3,7 @@ package com.owner.common.base.activity
 import android.view.View
 import androidx.viewbinding.ViewBinding
 import com.owner.common.base.viewmodel.BaseViewModel
+import com.owner.common.ext.inflateBindingWithGeneric
 
 
 /**

@@ -5,7 +5,6 @@ import com.owner.common.network.BaseResponse
 import com.owner.common.network.ExceptionHandle
 
 /**
- * 作者　: hegaojian
  * 时间　: 2020/4/9
  * 描述　: 自定义结果集封装类
  */

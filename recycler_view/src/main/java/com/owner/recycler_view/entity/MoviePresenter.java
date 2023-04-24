@@ -6,7 +6,7 @@ import com.owner.recycler_view.utils.Tips;
 
 
 /**
- * Created by luoxiongwen on 16/10/24.
+ *  16/10/24.
  */
 
 public class MoviePresenter {

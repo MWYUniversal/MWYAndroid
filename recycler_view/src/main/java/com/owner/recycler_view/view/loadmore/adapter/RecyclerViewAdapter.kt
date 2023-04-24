@@ -17,7 +17,6 @@ import com.owner.recycler_view.entity.Status
 import com.owner.recycler_view.utils.Tips
 
 /**
- * @author: limuyang
  * @date: 2019-12-04
  * @Description:
  */

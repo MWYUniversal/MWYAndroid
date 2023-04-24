@@ -1,7 +1,7 @@
 package com.owner.recycler_view.entity;
 
 /**
- * Created by luoxiongwen on 16/10/24.
+ *  16/10/24.
  */
 
 public class Movie {

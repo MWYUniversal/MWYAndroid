@@ -8,7 +8,6 @@ import androidx.viewbinding.ViewBinding
 import com.owner.common.base.viewmodel.BaseViewModel
 
 /**
- * 作者　: hegaojian
  * 时间　: 2019/12/12
  * 描述　: ViewModelFragment基类，自动把ViewModel注入Fragment和 ViewBinding 注入进来了
  * 需要使用 ViewBinding 的清继承它

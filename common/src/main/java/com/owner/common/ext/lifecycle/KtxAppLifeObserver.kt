@@ -6,7 +6,6 @@ import androidx.lifecycle.OnLifecycleEvent
 import com.owner.common.callback.livedata.BooleanLiveData
 
 /**
- * 作者　: hegaojian
  * 时间　: 20120/1/7
  * 描述　:
  */

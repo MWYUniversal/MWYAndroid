@@ -13,7 +13,6 @@ import com.owner.recycler_view.entity.Movie
 import java.util.*
 
 /**
- * @author limuyang
  * 2019-12-06
  */
 class UpFetchUseActivity : BaseViewBindingActivity<ActivityUniversalRecyclerBinding>() {
