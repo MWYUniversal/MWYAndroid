@@ -3,8 +3,16 @@ package com.owner.common.ext
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.owner.common.base.activity.BaseVmActivity
+import com.owner.common.base.fragment.BaseVmFragment
+import com.owner.common.base.viewmodel.BaseViewModel
 import kotlinx.coroutines.*
 import com.owner.common.ext.util.loge
+import com.owner.common.network.AppException
+import com.owner.common.network.BaseResponse
+import com.owner.common.network.ExceptionHandle
+import com.owner.common.state.ResultState
+import com.owner.common.state.paresException
+import com.owner.common.state.paresResult
 
 
 /**

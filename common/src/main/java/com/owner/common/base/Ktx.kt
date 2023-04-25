@@ -8,6 +8,9 @@ import android.database.Cursor
 import android.net.ConnectivityManager
 import android.net.Uri
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.owner.common.ext.lifecycle.KtxAppLifeObserver
+import com.owner.common.ext.lifecycle.KtxLifeCycleCallBack
+import com.owner.common.network.manager.NetworkStateReceive
 
 /**
  * 时间　: 2019/12/14

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.owner.common.base.viewmodel.BaseViewModel
+import com.owner.common.ext.inflateBindingWithGeneric
 
 /**
  * 时间　: 2019/12/12
