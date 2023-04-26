@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+ * <a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper">...</a>
  */
 public class GridItemDecoration extends RecyclerView.ItemDecoration {
 

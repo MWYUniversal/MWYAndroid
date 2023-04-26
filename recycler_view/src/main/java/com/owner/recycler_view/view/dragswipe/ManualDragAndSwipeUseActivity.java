@@ -1,16 +1,23 @@
 package com.owner.recycler_view.view.dragswipe;
 
 import android.animation.ValueAnimator;
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.chad.library.adapter.base.QuickAdapterHelper;
 import com.chad.library.adapter.base.dragswipe.QuickDragAndSwipe;
@@ -113,7 +120,7 @@ public class ManualDragAndSwipeUseActivity extends BaseViewBindingActivity<Activ
 
             @Override
             public void onItemSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction, int bindingAdapterPosition) {
-                Log.d(TAG,  "onItemSwiped");
+                Log.d(TAG, "onItemSwiped");
             }
 
             @Override
@@ -156,6 +163,28 @@ public class ManualDragAndSwipeUseActivity extends BaseViewBindingActivity<Activ
         }
         return data;
     }
+
+    /**
+     * 有回调的打开activity
+     * @author xiayiye5
+     * @date 2021/9/23 13:52
+     */
+    public void goPage() {
+        ActivityResultLauncher<Intent> lineActivityLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                //此处是跳转的result回调方法
+                if (result.getData() != null && result.getResultCode() == Activity.RESULT_OK) {
+//                    result.getData().getStringExtra(NewWordActivity.EXTRA_REPLY);
+                } else {
+//                    Toast.makeText(getApplicationContext(), R.string.empty_not_saved, Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+//        Intent intent = new Intent(JumpPage.this, NewWordActivity.class);
+//        intentActivityResultLauncher.launch(intent);
+    }
+
 }
 
 

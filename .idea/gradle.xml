@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/permission" />
             <option value="$PROJECT_DIR$/recycler_view" />
             <option value="$PROJECT_DIR$/room_db" />
+            <option value="$PROJECT_DIR$/rxhttp" />
           </set>
         </option>
       </GradleProjectSettings>

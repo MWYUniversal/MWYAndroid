@@ -5,6 +5,7 @@ import cat.ereza.customactivityoncrash.config.CaocConfig
 import com.owner.common.base.BaseApp
 import com.owner.ywm.view.activity.ErrorActivity
 import com.owner.ywm.view.activity.WelcomeActivity
+import com.tencent.mmkv.MMKV
 
 class App : BaseApp() {
 
@@ -16,6 +17,8 @@ class App : BaseApp() {
         super.onCreate()
         instance = this
         MultiDex.install(this)
+
+        MMKV.initialize(this.filesDir.absolutePath + "/mmkv")
 
         onPreventingCrashes()
 

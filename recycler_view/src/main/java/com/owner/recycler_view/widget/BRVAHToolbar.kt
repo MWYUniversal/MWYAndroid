@@ -1,7 +1,6 @@
 package com.owner.recycler_view.widget
 
 import android.content.Context
-import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
@@ -25,9 +24,7 @@ class BRVAHToolbar @JvmOverloads constructor(
 
     init {
         setBackgroundColor(ContextCompat.getColor(context, R.color.spinner_bg))
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            elevation = context.dpF(10)
-        }
+        elevation = context.dpF(10)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

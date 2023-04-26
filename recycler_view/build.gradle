@@ -76,7 +76,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //这里暂时以CymChad的BaseRecyclerViewAdapterHelper为基础
-    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta04"
+    api "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta04"
 
     implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")

@@ -7,7 +7,7 @@ import java.lang.reflect.Type
 
 /**
  * 时间　: 2020/2/27
- * 描述　:
+ * 描述　:协程
  */
 class CoroutineCallAdapterFactory private constructor() : CallAdapter.Factory() {
     companion object {
