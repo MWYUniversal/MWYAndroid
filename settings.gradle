@@ -4,10 +4,8 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         //阿里云jcenter仓库
-        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
-        maven {
-            url 'https://jitpack.io'
-        }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
@@ -19,7 +17,7 @@ dependencyResolutionManagement {
         maven { url "https://s01.oss.sonatype.org/content/groups/public" }
 
         //阿里云jcenter仓库
-        maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven {
             url 'https://jitpack.io'
         }

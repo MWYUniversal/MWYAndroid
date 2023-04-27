@@ -7,6 +7,8 @@ if(isRxHttpApplication.toBoolean()){
     apply plugin: 'com.android.library'
 }
 apply  plugin: 'org.jetbrains.kotlin.android'
+//使用kapt依赖rxhttp-compiler时必须
+apply plugin: 'kotlin-kapt'
 
 /*plugins {
     id 'com.android.application'
@@ -27,6 +29,25 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        kapt {
+            arguments {
+                //依赖了RxJava时，rxhttp_rxjava参数为必须，传入RxJava版本号
+                arg("rxhttp_rxjava", "3.1.6")
+                arg("rxhttp_package", "com.owner.rxhttp")  //指定RxHttp类包名，非必须
+            }
+        }
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        //使用asXxx方法时必须，传入你依赖的RxJava版本
+                        rxhttp_rxjava: '3.1.6',
+                        rxhttp_package: 'com.owner.rxhttp',  //指定RxHttp类包名，可随意指定(防止多模块依赖RxHttp时出现冲突)
+                ]
+            }
+        }
     }
 
     sourceSets {
@@ -74,7 +95,7 @@ dependencies {
     def rxhttp_version = '3.0.3'
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     implementation "com.github.liujingxing.rxhttp:rxhttp:$rxhttp_version"
-    annotationProcessor "com.github.liujingxing.rxhttp:rxhttp-compiler:$rxhttp_version"
+    kapt "com.github.liujingxing.rxhttp:rxhttp-compiler:$rxhttp_version"
 
     //RxJava3
     implementation 'io.reactivex.rxjava3:rxjava:3.1.6'

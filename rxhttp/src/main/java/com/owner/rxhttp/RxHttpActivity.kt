@@ -1,6 +1,8 @@
 package com.owner.rxhttp
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import com.owner.rxhttp.base.BaseViewBindingActivity
 import com.owner.rxhttp.databinding.ActivityRxHttpBinding
 
@@ -9,7 +11,16 @@ class RxHttpActivity : BaseViewBindingActivity<ActivityRxHttpBinding>() {
         return ActivityRxHttpBinding.inflate(layoutInflater)
     }
 
+    @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        RxHttp.get("https://www.wanandroid.com/article/list/0/json")
+            .toObservableString()
+            .subscribe({ s: String? ->
+                Log.e("onCreate: ",s.toString() )
+            }) { throwable: Throwable? ->
+
+            }
     }
 }
