@@ -15,12 +15,18 @@ class RxHttpActivity : BaseViewBindingActivity<ActivityRxHttpBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        RxHttp.get("https://www.wanandroid.com/article/list/0/json")
-            .toObservableString()
-            .subscribe({ s: String? ->
-                Log.e("onCreate: ",s.toString() )
-            }) { throwable: Throwable? ->
+        viewBinding.button.setOnClickListener {
+            RxHttp.get("https://www.wanandroid.com/article/list/0/json")
+                .toObservableString()
+                .subscribe({ s: String? ->
 
-            }
+                    viewBinding.textview.text = s.toString()
+                    Log.e("onCreate: ",s.toString() )
+                }) { throwable: Throwable? ->
+
+                }
+        }
+
+
     }
 }
