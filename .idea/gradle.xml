@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/recycler_view" />
             <option value="$PROJECT_DIR$/room_db" />
             <option value="$PROJECT_DIR$/rxhttp" />
+            <option value="$PROJECT_DIR$/video" />
           </set>
         </option>
       </GradleProjectSettings>
