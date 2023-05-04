@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 apply plugin: 'kotlin-kapt'
+/*序列化插件*/
+apply plugin: 'kotlin-parcelize'
 
 android {
     namespace 'com.owner.ywm'

@@ -76,4 +76,6 @@ dependencies {
 
     //ExoPlayer是一个Android应用层的媒体播放器，google官方
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+
+    //gsyvideoplayer 兼容IjkPlayer、ExoPlayer、Aliplayer
 }

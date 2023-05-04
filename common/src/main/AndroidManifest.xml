@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <application>
-        <provider
-            android:authorities="${applicationId}.KtxInstaller"
-            android:name=".base.Ktx"
-            android:exported="false"/>
-    </application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.my.common">
 
 </manifest>

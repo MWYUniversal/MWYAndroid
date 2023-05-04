@@ -5,10 +5,10 @@
         android:allowBackup="true"
         android:supportsRtl="true"
       >
-        <activity
+      <!--  <activity
             android:name=".view.MainActivity"
             android:exported="true">
-        </activity>
+        </activity>-->
     </application>
 
 </manifest>

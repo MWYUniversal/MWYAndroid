@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MWYAndroid">
+        android:theme="@style/Theme.RecyclerView">
 
         <activity
             android:name=".view.MainActivity"
