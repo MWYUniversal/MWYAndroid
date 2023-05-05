@@ -16,8 +16,8 @@ class BannerActivity : AppCompatActivity() {
         mBinding = ActivityBannerBinding.inflate(LayoutInflater.from(this))
         setContentView(mBinding.root)
 
-//        var imageAdapter = ImageAdapter(DataBean.getTestData2())
-        var imageAdapter = MultipleTypesAdapter(this,DataBean.getTestData())
+        var imageAdapter = ImageAdapter(DataBean.getTestData2())
+//        var imageAdapter = MultipleTypesAdapter(this,DataBean.getTestData())
 
 
         mBinding.banner.setAdapter(imageAdapter)
