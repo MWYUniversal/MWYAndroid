@@ -1,0 +1,83 @@
+//注意gradle.properties中的数据类型都是String类型，使用其他数据类型需要自行转换
+if (isBannerApplication.toBoolean()) {
+    //构建后输出一个 APK 安装包
+    apply plugin: 'com.android.application'
+} else {
+    //构建后输出 ARR 包
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'org.jetbrains.kotlin.android'
+
+
+/*plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}*/
+
+android {
+    namespace 'com.owner.banner'
+    compileSdk 33
+
+    defaultConfig {
+        if (isBannerApplication.toBoolean()) {
+            applicationId "com.owner.banner"
+        }
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main {
+            if (isBannerApplication.toBoolean()) {
+                //独立调试
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                //集成调试
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'io.github.youth5201314:banner:2.2.2'
+
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    //指示器库
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+
+    //ExoPlayer是一个Android应用层的媒体播放器，google官方
+    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+}

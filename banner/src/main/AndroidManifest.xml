@@ -3,11 +3,11 @@
 
     <application
         android:allowBackup="true"
-        android:supportsRtl="true"
-      >
+        android:supportsRtl="true">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".BannerActivity"
             android:exported="true">
+
         </activity>
     </application>
 

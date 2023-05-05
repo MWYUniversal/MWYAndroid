@@ -9,6 +9,7 @@ ext {
     isRoomDBApplication = true//    room_db 是否是独立工程
     isRxHttpApplication = true//    rxHttp 是否是独立工程
     isVideoApplication = true//   video 是否是独立工程
+    isBannerApplication = true//   banner 是否是独立工程
 
 
     android = [
