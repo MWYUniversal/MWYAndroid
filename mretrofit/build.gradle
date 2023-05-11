@@ -1,5 +1,5 @@
 //注意gradle.properties中的数据类型都是String类型，使用其他数据类型需要自行转换
-if (isPermissionXApplication.toBoolean()) {
+if (isRetrofitApplication.toBoolean()) {
     //构建后输出一个 APK 安装包
     apply plugin: 'com.android.application'
 } else {
@@ -14,13 +14,11 @@ apply plugin: 'org.jetbrains.kotlin.android'
 }*/
 
 android {
-    namespace 'com.owner.permission'
+    namespace 'com.owner.mretrofit'
     compileSdk 33
 
     defaultConfig {
-        if (isPermissionXApplication.toBoolean()) {
-            applicationId "com.owner.permission"
-        }
+        applicationId "com.owner.mretrofit"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -31,7 +29,7 @@ android {
 
     sourceSets {
         main {
-            if (isPermissionXApplication.toBoolean()) {
+            if (isRetrofitApplication.toBoolean()) {
                 //独立调试
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             } else {
@@ -54,7 +52,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -71,6 +68,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    //这里以郭霖的权限库为基础
-    implementation 'com.guolindev.permissionx:permissionx:1.7.1'
+    
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 }

@@ -10,6 +10,8 @@ ext {
     isRxHttpApplication = true//    rxHttp 是否是独立工程
     isVideoApplication = true//   video 是否是独立工程
     isBannerApplication = true//   banner 是否是独立工程
+    isOkHttpApplication = true//   mOkHttp 是否是独立工程
+    isRetrofitApplication = true//   retrofit 是否是独立工程
 
 
     android = [
