@@ -68,6 +68,34 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //Retrofit相关
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' //retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'        //gson converter
+    //  Retrofit专门为Rxjava封装的适配器
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    //Google的Gson相关
+    implementation 'com.google.code.gson:gson:2.10.1' //Gson
+
+    //Rxjava相关
+    implementation 'io.reactivex:rxjava:1.1.5'
+    implementation 'io.reactivex:rxandroid:1.2.0'//Rxjava专门针对anroid封装的RxAndroid复制代码
+
+    //okhttp相关内容
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'//okhttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2' //打印网络请求的log日志
+    //okhttp io流处理
+    implementation "com.squareup.okio:okio:3.2.0"//okhttp io流处理
+
+    // 协程相关
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+/*    //KTX
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
+    //coil
+    implementation("io.coil-kt:coil:1.2.1")*/
+
+
+
+
 }

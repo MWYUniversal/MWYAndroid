@@ -5,21 +5,24 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.owner.mokhttp.base.BaseViewBindingActivity
 import com.owner.mokhttp.databinding.ActivityMainBinding
 import okhttp3.*
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 import kotlin.math.log
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : BaseViewBindingActivity<ActivityMainBinding>(), View.OnClickListener {
     private val TAG = MainActivity::class.java.simpleName
-    private lateinit var mBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityMainBinding.inflate(LayoutInflater.from(this))
-        setContentView(mBinding.root)
-        mBinding.httpSync.setOnClickListener(this)
-        mBinding.httpAsync.setOnClickListener(this)
+        viewBinding.httpSync.setOnClickListener(this)
+        viewBinding.httpAsync.setOnClickListener(this)
+    }
+
+    override fun initBinding(): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
     }
 
     override fun onClick(v: View?) {
