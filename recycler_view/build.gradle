@@ -20,14 +20,14 @@ plugins {
 
 android {
     namespace 'com.owner.recycler_view'
-    compileSdk 33
+    compileSdk androidx.versions.compileSdk.get().toInteger()
 
     defaultConfig {
         if(isRecyclerViewApplication.toBoolean()) {
         applicationId "com.owner.recycler_view"
         }
-        minSdk 24
-        targetSdk 33
+        minSdk androidx.versions.minSdk.get().toInteger()
+        targetSdk androidx.versions.targetSdk.get().toInteger()
         versionCode 1
         versionName "1.0"
 

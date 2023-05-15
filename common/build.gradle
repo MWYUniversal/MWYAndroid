@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace 'com.owner.common'
-    compileSdk 33
+    compileSdk androidx.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        minSdk 24
-        targetSdk 33
+        minSdk androidx.versions.minSdk.get().toInteger()
+        targetSdk androidx.versions.targetSdk.get().toInteger()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

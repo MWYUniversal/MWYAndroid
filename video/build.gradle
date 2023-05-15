@@ -16,15 +16,15 @@ apply  plugin: 'org.jetbrains.kotlin.android'
 
 android {
     namespace 'com.owner.video'
-    compileSdk 33
+    compileSdk androidx.versions.compileSdk.get().toInteger()
 
     defaultConfig {
         if(isVideoApplication.toBoolean()){
             applicationId "com.owner.video"
         }
 
-        minSdk 24
-        targetSdk 33
+        minSdk androidx.versions.minSdk.get().toInteger()
+        targetSdk androidx.versions.targetSdk.get().toInteger()
         versionCode 1
         versionName "1.0"
 
