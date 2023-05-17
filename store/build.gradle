@@ -1,12 +1,13 @@
 //注意gradle.properties中的数据类型都是String类型，使用其他数据类型需要自行转换
-if(isVideoApplication.toBoolean()){
+if (isStoreApplication.toBoolean()) {
     //构建后输出一个 APK 安装包
     apply plugin: 'com.android.application'
-}else{
+} else {
     //构建后输出 ARR 包
     apply plugin: 'com.android.library'
 }
-apply  plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-kapt'
 
 
 /*plugins {
@@ -15,14 +16,14 @@ apply  plugin: 'org.jetbrains.kotlin.android'
 }*/
 
 android {
-    namespace 'com.owner.video'
+    namespace 'com.owner.store'
     compileSdk androidx.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        if(isVideoApplication.toBoolean()){
-            applicationId "com.owner.video"
+        if (isStoreApplication.toBoolean()) {
+            //独立调试的时候才能设置applicationId
+            applicationId "com.owner.store"
         }
-
         minSdk androidx.versions.minSdk.get().toInteger()
         targetSdk androidx.versions.targetSdk.get().toInteger()
         versionCode 1
@@ -33,7 +34,7 @@ android {
 
     sourceSets {
         main {
-            if (isVideoApplication.toBoolean()) {
+            if (isStoreApplication.toBoolean()) {
                 //独立调试
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             } else {
@@ -56,7 +57,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -73,9 +73,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
-    //ExoPlayer是一个Android应用层的媒体播放器，google官方
-    implementation 'com.google.android.exoplayer:exoplayer:2.18.5'
-
-    //gsyvideoplayer 兼容IjkPlayer、ExoPlayer、Aliplayer
 }

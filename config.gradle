@@ -12,6 +12,7 @@ ext {
     isBannerApplication = true//   banner 是否是独立工程
     isOkHttpApplication = true//   mOkHttp 是否是独立工程
     isRetrofitApplication = true//   retrofit 是否是独立工程
+    isStoreApplication = true//   retrofit 是否是独立工程
 
 
     android = [
