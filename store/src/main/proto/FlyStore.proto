@@ -1,0 +1,23 @@
+// 声明协议， 也支持 prota2，普遍使用proto3
+syntax = "proto3";
+
+/**
+ * 通过potorbuf 描述对象生成java类。
+ */
+option java_package = "com.owner.store";//设置生成的类所在的包
+option java_multiple_files = true;//可能会有多个文件。
+
+//内容定义 UserPreferences 为类名
+//字段格式为  类型 字段名 = 编号 ，注意此处编号需要唯一。
+message PersonPreferences {
+  string name = 1;
+  int32 age = 2;
+}
+
+message UserPreferences {
+  string name = 1;
+  int32 age = 2;
+  float weight = 3;
+  float tall = 4;
+  int32 sex = 5;
+}
